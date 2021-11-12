@@ -1,0 +1,37 @@
+@import "vars";
+@import "mixins";
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Lexend", "Noto Sans KR", sans-serif; //영문폰트 앞에 쓰라고 구글폰트에서 알려줌
+  color: $text-color;
+}
+.btns {
+  display: flex;
+  &.center {
+    justify-content: center;
+  }
+  &.right {
+    justify-content: flex-end;
+  }
+  .btn {
+    border: 1px solid $black-color;
+    border-radius: 100px;
+    @include flexCenter();
+    transition: 0.25s ease;
+  }
+  .transition:hover {
+    background-color: $black-color;
+    border-color: $black-color;
+    color: $white-color;
+  }
+  .large {
+    height: 50px;
+    padding: 0 50px;
+  }
+}
+.hidden {
+  display: none;
+}
